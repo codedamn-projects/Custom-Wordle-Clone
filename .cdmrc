@@ -1,2 +1,3 @@
 tabs: ['pages/index.js']
 terminal-one: yarn && yarn dev
+terminal-two: mongod
