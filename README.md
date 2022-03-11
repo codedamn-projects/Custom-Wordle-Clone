@@ -11,14 +11,58 @@ You can use **any tools or technologies** you like to help you complete the chal
  
 You can get the complete idea of the project from checking out the `/designs` folder.
 
+If you have never tried wordle yet, you can try it [here](https://www.nytimes.com/games/wordle/index.html)
 
 ### Landing Page 
 
-![home page]()
+![home page](https://raw.githubusercontent.com/codedamn-projects/Custom-Wordle-Clone/master/designs/Landing%20Page%20%5BDESKTOP%5D.png)
+
+The page should contain the keyboard and boxes for the characters. The rules remain similar to the actual wordle game. 
 
 
-## Backend Tasks
+1) A random word is chosen 
 
+
+2) if the entered word is not in dictionary, then the word should not be treated as an actual attempt, but must be prompted to enter the word again
+You can this [https://dictionaryapi.dev/](https://dictionaryapi.dev/) as the dictionary api. 
+
+3) on entering a word, each character in it gets a color on the keyboard 
+   1) Green : if the letters position is correct on the word 
+   2) Yellow : if the letter exists in the word but not in the correct order
+   3) Black: if the letter does not exist in the word
+
+#### How to play 
+
+![how to play](https://raw.githubusercontent.com/codedamn-projects/Custom-Wordle-Clone/master/designs/How%20to%20Play%20%5BDESKTOP%5D.png)
+
+The games details are explained in the modal, you can try and rephrase them if you want
+
+## Custom Wordle
+
+Here, we can let the user generate a link for the custom word they choose. 
+
+![custom wordle](https://raw.githubusercontent.com/codedamn-projects/Custom-Wordle-Clone/master/designs/Custom%20Word%20Modal%20%5BDESKTOP%5D.png)
+
+The custom wordle can be shared using the optional key value pair in the URL
+
+For storing the the custom word encrypted on the mongodb database. 
+
+You can use the [Crypto-js](https://www.npmjs.com/package/crypto-js) package. 
+Or you can implement your own encryption mechanism. 
+
+
+### MongoDB Database
+```
+{
+    'originalWord' : string,
+    'rotationValue' : number,
+    'cipheredWord' : string,
+}
+```
+
+### Correct Word 
+
+![correct word](https://raw.githubusercontent.com/codedamn-projects/Custom-Wordle-Clone/master/designs/YOU%20WON!%20MODAL%20%5BDESKTOP%5D.png)
 
 
 
@@ -30,9 +74,7 @@ Want some support on the challenge? [Join our discord community](https://cdm.sh/
 
 There is no limit you can go beyond the mentioned criteria and create additional functionalities
 
-## Recommended Technologies 
 
-1. Tailwind CSS for User Interface
 
 ## Where to find everything
 
