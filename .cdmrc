@@ -1,0 +1,2 @@
+tabs: ['pages/index.js']
+terminal-one: yarn && yarn dev
