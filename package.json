@@ -1,16 +1,30 @@
 {
-  "name": "test",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev -p $PUBLIC_PORT",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "^12.0.7",
-    "react": "^18.0.0-rc.0",
-    "react-dom": "^18.0.0-rc.0"
-  }
+	"name": "new",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --port 1337",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@types/better-sqlite3": "^7.6.5",
+		"better-sqlite3": "^9.0.0",
+		"kysely": "^0.26.3",
+		"next": "13.5.5",
+		"react": "^18",
+		"react-dom": "^18"
+	},
+	"devDependencies": {
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"autoprefixer": "^10",
+		"postcss": "^8",
+		"prisma": "^5.4.2",
+		"prisma-kysely": "^1.7.1",
+		"tailwindcss": "^3",
+		"typescript": "^5"
+	}
 }

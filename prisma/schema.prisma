@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator kysely {
+    provider = "prisma-kysely"
+
+    // Optionally provide a destination directory for the generated file
+    // and a filename of your choice
+    output = "../src/db"
+    fileName = "types.ts"
+    // Optionally generate runtime enums to a separate file
+    enumFileName = "enums.ts"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Word {
+  uniqueId String @id
+  word String
+  usedOn UsedWords[]
+}
+
+model UsedWords {
+  uniqueId String @id
+  useDate DateTime
+
+  usedWordsWord Word @relation(fields: [wordId], references: [uniqueId])
+  wordId String
+
+}

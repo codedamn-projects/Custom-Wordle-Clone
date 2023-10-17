@@ -1,3 +1,3 @@
-tabs: ['pages/index.js','README.md']
-terminal-one: yarn && yarn dev
-terminal-two: mongod
+tabs: ["src/pages/index.", "src/pages/api/hello.ts"]
+terminals: ["npm install && npm run dev"]
+run-button: npm run dev
