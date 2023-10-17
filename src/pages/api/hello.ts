@@ -1,14 +1,16 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { db } from '@/db/database'
 
 
-
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
 
-  res.status(200).json({ name: 'codedamn' })
+  const words = await db.selectFrom('Word').selectAll().execute();
+
+  res.status(200).json({ name: 'codedamn', words })
 
 
 }
